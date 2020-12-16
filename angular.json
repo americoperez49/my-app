@@ -28,9 +28,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/css/my-theme.scss",
+              "src/css/extraSCSS.scss"
             ],
-            "scripts": []
+            "scripts": [
+              // "node_modules/gsap/src/all.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -120,6 +123,10 @@
               "devServerTarget": "my-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
