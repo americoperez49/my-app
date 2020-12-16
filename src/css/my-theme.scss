@@ -146,25 +146,24 @@ $mat-dark-theme-background: (
 
 // Theme Config
 
-body {
-  --primary-color: #1d5092;
-  --primary-lighter-color: #bbcbde;
-  --primary-darker-color: #113775;
-  --text-primary-color: #{$light-primary-text};
-  --text-primary-lighter-color: #{$dark-primary-text};
-  --text-primary-darker-color: #{$light-primary-text};
-}
-
-$mat-primary: (
-  main: #1d5092,
-  lighter: #bbcbde,
-  darker: #113775,
-  200: #1d5092, // For slide toggle,
-  contrast : (
-    main: $light-primary-text,
-    lighter: $dark-primary-text,
-    darker: $light-primary-text,
-  )
+body {	
+  --primary-color: #ffffff;	
+  --primary-lighter-color: #ffffff;	
+  --primary-darker-color: #ffffff;	
+  --text-primary-color: #{$dark-primary-text};	
+  --text-primary-lighter-color: #{$dark-primary-text};	
+  --text-primary-darker-color: #{$dark-primary-text};	
+}	
+$mat-primary: (	
+  main: #ffffff,	
+  lighter: #ffffff,	
+  darker: #ffffff,	
+  200: #ffffff, // For slide toggle,	
+  contrast : (	
+    main: $dark-primary-text,	
+    lighter: $dark-primary-text,	
+    darker: $dark-primary-text,	
+  )	
 );
 $theme-primary: mat-palette($mat-primary, main, lighter, darker);
 

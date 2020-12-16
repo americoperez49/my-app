@@ -3,9 +3,12 @@
         <a href="index.html" class="logo">Americo Perez</a>
         <nav>
             <ul>
-                <li><a href="#">My Work</a></li>
+                <li><button mat-button color="primary" (click)="scrollToWork()">My Work</button></li>
+                <li><button mat-button color="primary" (click)="scrollToSkills()">My Skills</button></li>
+                <li><button mat-button color="primary">Hire Me</button></li>
+                <!-- <li><a href="#">My Work</a></li>
                 <li><a href="#">My Skills</a></li>
-                <li><a href="#">Hire me</a></li>
+                <li><a href="#">Hire me</a></li> -->
             </ul>
         </nav>
     </header>
@@ -45,7 +48,7 @@
       
 </div>
 
-<section class="featured">
+<section id="work" class="featured">
     <div class="left">
         <div class="inner transition2">
             <p class="subtitle">featured project</p>
@@ -61,7 +64,7 @@ jobs that are being bid on in the Automation Controls Industry.
     <img class="right transition2" src="assets\images\BDT-Image.png" alt="featured project">
 </section>
 
-<section class="skills">
+<section id="skills" class="skills">
     <div class="skills-container">
         <ul>
             <li class="transition2">

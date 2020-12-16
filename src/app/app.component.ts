@@ -2,7 +2,6 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { gsap} from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import {Power4,Back} from "gsap/all"
-import { stagger } from '@angular/animations';
 
 gsap.registerPlugin(ScrollTrigger,Power4,Back);
 
@@ -78,7 +77,13 @@ export class AppComponent implements OnInit {
 
   }
 
-  
+  scrollToWork() {
+    document.getElementById("work").scrollIntoView({behavior: "smooth"});
+  }
+
+  scrollToSkills() {
+    document.getElementById("skills").scrollIntoView({behavior: "smooth"});
+  }
   
 }
 
