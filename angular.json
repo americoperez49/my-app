@@ -31,9 +31,7 @@
               "src/css/my-theme.scss",
               "src/css/extraSCSS.scss"
             ],
-            "scripts": [
-              // "node_modules/gsap/src/all.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
