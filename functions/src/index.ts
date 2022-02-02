@@ -1,27 +1,28 @@
 import * as functions from 'firebase-functions';
-import * as sgMail from '@sendgrid/mail'
+import * as sgMail from '@sendgrid/mail';
 
 const API_KEY = functions.config().sendgrid.key;
 sgMail.setApiKey(API_KEY);
 
-export const newGenericEmail = functions.https.onCall(async(data)=>{
-    const msg = {
-        to:"americoperez49@gmail.com",
-        from:"americoperez49@gmail.com",
-        subject: "testSubj",
-        text:data.from +" has sent you the following: \n" + data.text ,
-    }
+export const newGenericEmail = functions.https.onCall(async (data) => {
+  const msg = {
+    to: 'americoperez49@gmail.com',
+    from: 'americoperez49@gmail.com',
+    subject: 'Email sent from Resume Website',
+    text: data.from + ' has sent you the following: \n' + data.text,
+  };
 
-    await sgMail.send(msg).then(()=>{
-        console.log('Email sent');
-      
+  await sgMail
+    .send(msg)
+    .then(() => {
+      console.log('Email sent');
     })
-    .catch((error)=>{
-        console.log(error.toString())
-        return {succes:'false'};
-    })
+    .catch((error) => {
+      console.log(error.toString());
+      return { succes: 'false' };
+    });
 
-    return {succes:'true'};
+  return { succes: 'true' };
 });
 
 // // Start writing Firebase Functions
